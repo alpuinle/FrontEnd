@@ -3,10 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { LogoArgProgComponent } from './components/logo-arg-prog/logo-arg-prog.component';
+import { SocialComponent } from './components/social/social.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    LogoArgProgComponent,
+    SocialComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
