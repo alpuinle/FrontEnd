@@ -1,5 +1,4 @@
-FROM  amazoncorretto:17-alpine3.14-jdk
+from amazoncorretto:17
 MAINTAINER alpuinle
-COPY target/ap-0.0.1-SNAPSHOT.jar ap-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java", "-jar", "/ap-0.0.1-SNAPSHOT.jar"
-
+COPY target/ap-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar", "/app.jar"]
