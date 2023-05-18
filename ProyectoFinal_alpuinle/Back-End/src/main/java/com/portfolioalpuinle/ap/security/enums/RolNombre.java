@@ -1,8 +1,0 @@
-
-package com.portfolioalpuinle.ap.security.enums;
-
-
-public enum RolNombre {
-    ROLE_ADMIN, ROLE_USER
-    
-}
