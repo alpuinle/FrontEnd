@@ -1,6 +1,61 @@
-# ProyectoFinalAlpuinle
+# ProyectoFinal![Logo Argentina Programa](https://github.com/alpuinle/FrontEnd/assets/119378662/0d79ca9d-6110-4a27-af46-568cc65c2351)
+
+
+Creation of Portfolio as an integrating project of the "Argentina Programa" course #YoProgramo 4.0
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+
+## Authors
+
+- [@alpuinle](https://https://github.com/alpuinle)
+
+## Estado
+![Badge en Desarollo](https://img.shields.io/badge/STATUS-IN%20DEVELOPMENT-green)
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm run deploy
+```
+
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
+```
+    
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/alpuinle/FrontEnd.git
+```
+
+Go to the project directory
+
+```bash
+  cd FrontEnd
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
 
 ## Development server
 
