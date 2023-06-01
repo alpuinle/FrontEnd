@@ -1,13 +1,14 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Experiencia } from '../model/experiencia';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { Experiencia } from "../model/experiencia";
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class SExperienciaService {
-  expURL = 'http://localhost:8080/explab/'
+  expURL = 'https://portfolio-alpuinle.onrender.com/explab/';
   
   constructor(private httpClient: HttpClient) { }
 

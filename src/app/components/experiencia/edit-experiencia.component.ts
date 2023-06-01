@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
-import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-edit-experiencia',
@@ -30,6 +31,7 @@ expLab : Experiencia = null;
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.update(id, this.expLab).subscribe(
       data =>{
+        alert("Experiencia actualizada");
          this.router.navigate(['']);
     }, err =>{
       alert("Error al modificar experiencia")

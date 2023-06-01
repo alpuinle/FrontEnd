@@ -1,15 +1,17 @@
-import { HttpBackend, HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { JwtDto } from '../model/jwt-dto';
-import { Observable } from 'rxjs';
-import { LoginUsuario } from '../model/login-usuario';
-import { NuevoUsuario } from '../model/nuevo-usuario';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { JwtDto } from "../model/jwt-dto";
+import { LoginUsuario } from "../model/login-usuario";
+import { NuevoUsuario } from "../model/nuevo-usuario";
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://portfolio-alpuinle.onrender.com/auth/';
 
   constructor(private httpClient: HttpClient) { }
 
