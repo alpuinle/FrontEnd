@@ -5,12 +5,27 @@ Creation of Portfolio as an integrating project of the "Argentina Programa" cour
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
+## Description
+My App is an interactive web application that allows users to efficiently manage and share their your skills and studies to present your resume. With a modern and user-friendly interface, this application provides an intuitive way to organize and collaborate with other users in real time.
+
+## Features
+- User registration and secure login authentication.
+- Interactive creation, editing, and deletion of tasks.
+- Intuitive and responsive interface for an optimal experience on mobile devices.
+
 ## Authors
 
 - [@alpuinle](https://https://github.com/alpuinle)
 
-## Estado
+## Status
 ![Badge en Desarollo](https://img.shields.io/badge/STATUS-IN%20DEVELOPMENT-green)
+
+## Screenshots
+![Principal](https://github.com/alpuinle/FrontEnd/assets/119378662/f7db68fa-87b6-4ac9-8b0a-268c7249a5ef)
+![Principal 2](https://github.com/alpuinle/FrontEnd/assets/119378662/d53730d8-405d-4bfd-9950-c9157ee4178c)
+![Carga](https://github.com/alpuinle/FrontEnd/assets/119378662/2be5a761-9480-494a-8427-de2c0672978c)
+
+
 
 ## Deployment
 
@@ -80,3 +95,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Contribution
+Thank you for your interest in contributing to My App! If you would like to collaborate, please follow these steps:
+
+1-Fork this repository.
+
+2-Create a branch with a new feature or problem solution.
+
+3-Make the necessary changes and commit them.
+
+4-Submit a pull request describing your changes.
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
