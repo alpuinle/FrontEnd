@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class SkillService {
   skillURL = 'https://portfolio-alpuinle.onrender.com/skill/';
+  /*skillURL = 'http://localhost:8080/skill/';*/
 
   constructor(private httpClient: HttpClient) { }
 
