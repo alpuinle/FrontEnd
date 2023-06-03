@@ -1,5 +1,6 @@
 <div class="container" *ngIf="skill">
     <div class="row">
+      <div class="col-lg-1"></div>
         <div>
           <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
             <div class="form-group">
@@ -15,6 +16,7 @@
             <button type="submit" class="btn btn-dark">
                  Actualizar
             </button>
+            <input class="btn btn-info btn-md btn-light" style="margin-left: 10px" type="button" onclick="history.back()" name="Volver" value="Volver">
           </form> 
         </div>
 

@@ -1,5 +1,6 @@
-<div class="container">
-    <div class="row">
+<div class="container" >
+    <div class="row" >
+      <div class="col-lg-1"></div>
         <div>
           <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
             <div class="form-group">
@@ -10,9 +11,11 @@
                 <label for="descripcionE">Descripcion de los estudios</label>
                 <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required>
             </div>
+            <br>
             <button type="submit" class="btn btn-dark">
                  Agregar educacion
             </button>
+            <input class="btn btn-info btn-md btn-light" style="margin-left: 10px" type="button" onclick="history.back()" name="Volver" value="Volver">
           </form> 
         </div>
 

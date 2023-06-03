@@ -1,5 +1,6 @@
 <div class="container" *ngIf="persona">
     <div class="row">
+        <div class="col-lg-1"></div>
         <div>
           <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
             <div class="form-group">
@@ -24,14 +25,15 @@
             <div class="imagen">
                  <img [src]="imageService.url" width="180px">
             </div>
-
+            
             <br>
             <button type="submit" class="btn btn-dark">
                  Actualizar
             </button>
+            <input class="btn btn-info btn-md btn-light" style="margin-left: 10px" type="button" onclick="history.back()" name="Volver" value="Volver">
           </form> 
         </div>
-
+        
     </div>
 
 </div>
