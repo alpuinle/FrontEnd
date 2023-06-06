@@ -7,8 +7,8 @@ import { persona } from '../model/presona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'https://portfolio-alpuinle.onrender.com/personas/';
-  /*URL = 'http://localhost:8080/personas/';*/
+  /*URL = 'https://portfolio-alpuinle.onrender.com/personas/';*/
+  URL = 'http://localhost:8080/personas/';
 
   constructor(private httpClient: HttpClient) { }
 
