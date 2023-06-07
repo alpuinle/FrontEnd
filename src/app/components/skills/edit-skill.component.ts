@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Skill } from 'src/app/model/skill';
 import { SkillService } from 'src/app/service/skill.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-skill',
@@ -22,7 +23,7 @@ export class EditSkillComponent implements OnInit {
       data => {
         this.skill = data;
       }, err => {
-        alert("Error al modificar");
+        Swal.fire("Error", "Error al modificar", "error");
         this.router.navigate(['']);
       }
      )
@@ -32,10 +33,10 @@ export class EditSkillComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.skillS.update(id, this.skill).subscribe(
       data => {
-        alert("Skill actualizada");
+        Swal.fire("Muy bien!","Skill actualizada", "success");
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar la skill");
+        Swal.fire("Error", "Error al modificar la skill", "error");
         this.router.navigate(['']);
       }
     )

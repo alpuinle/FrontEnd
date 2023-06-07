@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { persona } from 'src/app/model/presona.model';
 import { ImageService } from 'src/app/service/image.service';
 import { PersonaService } from 'src/app/service/persona.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-acerca-de',
@@ -22,7 +23,7 @@ export class EditAcercaDeComponent implements OnInit {
       data => {
         this.persona = data;
       }, err => {
-        alert("Error al modificar");
+        Swal.fire("Error", "Error al modificar persona", "error");
         this.router.navigate(['']);
       }
     )
@@ -33,10 +34,10 @@ export class EditAcercaDeComponent implements OnInit {
     this.persona.img = this.imageService.url
     this.personaService.update(id, this.persona).subscribe(
       data => {
-        alert("Persona actualizada");
+        Swal.fire("Muy bien!","Persona actualizada", "success");
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar la persona");
+        Swal.fire("Error", "Error al modificar persona", "error");
         this.router.navigate(['']);
       }
     )

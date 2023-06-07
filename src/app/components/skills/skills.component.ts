@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Skill } from 'src/app/model/skill';
 import { SkillService } from 'src/app/service/skill.service';
 import { TokenService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-skills',
@@ -35,10 +36,10 @@ export class SkillsComponent implements OnInit{
     if(id != undefined){
       this.skillS.delete(id).subscribe(
         data => {
-          alert("Skill eliminada");
+          Swal.fire("Muy bien!","Skill eliminada", "success");
           this.cargarSkills();
         }, err => {
-          alert("No se pudo borrar la skill");
+          Swal.fire("Error", "Error al borrar la skill", "error");
         }
         )
     }

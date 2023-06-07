@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-educacion',
@@ -34,10 +35,10 @@ export class EditEducacionComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params['id'];
     this.educacionS.update(id, this.educacion).subscribe(
       data => {
-        alert("Educación actualizada");
+        Swal.fire("Muy bien!","Educación actualizada", "success");
         this.router.navigate(['']);
       }, err => {
-        alert("Error al modificar la educación");
+        Swal.fire("Error", "Error al modificar la educación", "error");
         this.router.navigate(['']);
       }
     )

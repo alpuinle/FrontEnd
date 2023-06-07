@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
 import { TokenService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-educacion',
@@ -36,10 +37,10 @@ export class EducacionComponent {
       if(id != undefined){
         this.educacionS.delete(id).subscribe(
           data => {
-            alert("Educación eliminada");
+            Swal.fire("Muy bien!","Educación eliminada", "success");
             this.cargarEducacion();
           }, err => {
-            alert('No fue posible eliminar');
+            Swal.fire("Error", "Error al eliminar la educación", "error");
           }
         )
       }
