@@ -40,10 +40,16 @@ export class EditEducacionComponent implements OnInit {
     if (!this.fechaFinValida) {
       Swal.fire("Error", "La fecha de fin no puede ser anterior a la fecha de inicio", "error");
       return;
-    }
-  
-    Swal.fire("Muy bien!", "Educación actualizada", "success");
-    this.router.navigate(['']);
+    }this.educacionS.update(id, this.educacion).subscribe(
+      (data) => {
+        Swal.fire('Muy bien!', 'Skill actualizada', 'success');
+        this.router.navigate(['']);
+      },
+      (err) => {
+        Swal.fire('Error', 'Error al modificar la skill', 'error');
+        this.router.navigate(['']);
+      }
+    );
   }
 
   validarFechaFin(): void {

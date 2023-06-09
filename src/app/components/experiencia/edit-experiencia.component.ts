@@ -21,10 +21,10 @@ errorFechaFin: string = ''; // Mensaje de error de la fecha de fin
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.detail(id).subscribe(
-      data =>{
+      (data) =>{
         this.expLab = data;
         this.validarFechaFin(); // Validar la fecha de fin al cargar el componente
-  }, err =>{
+  }, (err) =>{
     Swal.fire("Error al modificar experiencia")
       this.router.navigate(['']);
   }
@@ -37,10 +37,18 @@ onUpdate(): void {
     Swal.fire("Error", "La fecha de fin no puede ser anterior a la fecha de inicio", "error");
     return;
   }
-
-  Swal.fire("Muy bien!", "Educación actualizada", "success");
-  this.router.navigate(['']);
-}
+  
+    this.sExperiencia.update(id, this.expLab).subscribe(
+      (data) => {
+        Swal.fire('Muy bien!', 'Skill actualizada', 'success');
+        this.router.navigate(['']);
+      },
+      (err) => {
+        Swal.fire('Error', 'Error al modificar la skill', 'error');
+        this.router.navigate(['']);
+      }
+    );
+  }
 
 validarFechaFin(): void {
   if (this.expLab.fechaInicio && this.expLab.fechaFin) {
