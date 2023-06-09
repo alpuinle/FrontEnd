@@ -15,6 +15,9 @@ import Swal from 'sweetalert2';
 export class NewExperienciaComponent implements OnInit {
   nombreE: string = '';
   descripcionE: string = '';
+  fechaInicio: string;
+  fechaFin: string;
+  fechaFinValida: boolean = true; // Variable para verificar la validez de la fecha de fin
 
   constructor(private sExperiencia: SExperienciaService, private router: Router) { }
 
@@ -22,16 +25,26 @@ export class NewExperienciaComponent implements OnInit {
   }
 
   onCreate(): void {
-    const expe = new Experiencia(this.nombreE, this.descripcionE);
+    const expe = new Experiencia(this.nombreE, this.descripcionE, this.fechaInicio, this.fechaFin);
+    if (!this.fechaFinValida) {
+      Swal.fire("Error", "La fecha de fin no puede ser anterior a la fecha de inicio", "error");
+      return;
+    }
     this.sExperiencia.save(expe).subscribe(
       data => {
-        Swal.fire("Muy bien!","Experiencia añadida", "success");
+        Swal.fire("Muy bien!", "Experiencia añadida exitosamente", "success");
         this.router.navigate(['']);
-      }, err => {
-        Swal.fire("Error","Error al cargar experiencia", "error");
+      },
+      err => {
+        Swal.fire("Error", "Error al agregar la experiencia", "error");
         this.router.navigate(['']);
       }
-    )
+    );
   }
 
+  validarFechaFin(): void {
+    if (this.fechaInicio && this.fechaFin) {
+      this.fechaFinValida = new Date(this.fechaFin) >= new Date(this.fechaInicio);
+    }
+  }
 }

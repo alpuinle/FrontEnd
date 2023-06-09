@@ -1,29 +1,44 @@
-<div class="row" style="color: #ffffffd4;">
-   <h1>Educación</h1>
-   <div class="col-lg-2">
-     <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
-        Agregar Educacion
-     </button>
-   </div>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+    .row, h1, h2, td, button {
+      font-family: 'Lato', sans-serif;
+    }
+  </style>
+</head>
 
-   <div class="col-lg-1" ></div>
-   <div class="col-lg-11" >
-      <table class="table" style="color: #ffffffd4;">
-        <tbody>
-           <tr *ngFor="let Educacion of educacion">
-              <td><h2>{{Educacion.nombreE}}</h2></td>
-              <td>{{Educacion.descripcionE}}</td>
-              <td *ngIf="isLogged">
-                 <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
-                 <i class="bi bi-pencil"></i>EDITAR</button>
-              </td>
-              <td *ngIf="isLogged">
-                 <button class="btn btn-danger" (click)="delete(Educacion.id)">
-                    <i class="bi bi-trash"></i>BORRAR</button>
-              </td>
-           </tr>
-        </tbody>
-     </table>
+<div class="row" style="color: #ffffffd4;">
+  <h1><strong>Educación</strong></h1>
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+      Agregar Educacion
+    </button>
+  </div>
+
+  <div class="col-lg-1"></div>
+  <div class="col-lg-11">
+    <table class="table" style="color: #ffffffd4;">
+      <tbody>
+        <tr *ngFor="let educacionItem of educacion">
+          <td><h2>{{ educacionItem.nombreE }}</h2></td>
+          <td>{{ educacionItem.descripcionE }}</td>
+          <td>{{ educacionItem.fechaInicio | date:'dd-MM-yy' }}</td>
+          <td>{{ educacionItem.fechaFin | date:'dd-MM-yy' }}</td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-light" routerLink="/editedu/{{ educacionItem.id }}">
+              <i class="bi bi-pencil"></i> EDITAR
+            </button>
+          </td>
+          <td *ngIf="isLogged">
+            <button class="btn btn-danger" (click)="delete(educacionItem.id)">
+              <i class="bi bi-trash"></i> BORRAR
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
-

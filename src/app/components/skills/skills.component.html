@@ -1,31 +1,46 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+    .row, h1, h2, td, button {
+      font-family: 'Lato', sans-serif;
+    }
+  </style>
+</head>
+
 <div class="row" style="color: #ffffffd4;">
 
-    <h1>Hard & Soft skills</h1>
+    <h1><strong>Hard & Soft skills</strong></h1>
     <div class="col-lg-2">
       <button type= "button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
     </div>
 
-    <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
-        <circle-progress
-      [percent]="(skill.porcentaje)"
-      [radius]="100"
-      [imageSrc]="''"
-      [showImage]="false"
-      [imageHeight]="60"
-      [imageWidth]="60"
-      [showUnits]="false"
-      [title]="(skill.nombre)"
-      [titleColor]="'#1d4657'"
-      [showTitle]="true"
-      [outerStrokeWidth]="11"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'#0063c0'"
-      [innerStrokeColor]="'#409dc2'"
-      [animation]="true"
-      [animationDuration]="500">
-    </circle-progress>
+    <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" style="font-family: 'Lato', sans-serif;" *ngFor="let skill of skill">
+      <circle-progress
+    [percent]="(skill.porcentaje)"
+    [radius]="100"
+    [imageSrc]="''"
+    [showImage]="false"
+    [imageHeight]="60"
+    [imageWidth]="60"
+    [showUnits]="false"
+    [title]="(skill.nombre)"
+    [titleColor]="'#132f3a'"
+    [titleFontSize]="'30'"
+    [showTitle]="true"
+    [showSubtitle]="false"
+    [outerStrokeWidth]="11"
+    [innerStrokeWidth]="8"
+    [outerStrokeColor]="'#0063c0'"
+    [innerStrokeColor]="'#409dc2'"
+    [animation]="true"
+    [animationDuration]="500">
+  </circle-progress>
 
-    <div>
+  <div>
+
       <td *ngIf="isLogged">
         <button class="btn btn-light" routerLink="/editskill/{{skill.id}}">
             <i class="bi bi-pencil"></i></button>

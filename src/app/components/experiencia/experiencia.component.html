@@ -1,5 +1,17 @@
+<head>
+   <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+   <style>
+     body {
+       font-family: 'Lato', sans-serif;
+     }
+     .row, h1, h2, td, button {
+       font-family: 'Lato', sans-serif;
+     }
+   </style>
+ </head>
+ 
 <div class="row" style="color: #ffffffd4;">
-    <h1>Experiencia laboral</h1>
+    <h1><strong>Experiencia laboral</strong></h1>
     <div class="col-lg-2">
       <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
          Nueva Experiencia
@@ -13,6 +25,8 @@
             <tr *ngFor="let Experiencia of expe">
                <td><h2>{{Experiencia.nombreE}}</h2></td>
                <td>{{Experiencia.descripcionE}}</td>
+               <td>{{Experiencia.fechaInicio | date:'dd-MM-yy' }}</td>
+               <td>{{Experiencia.fechaFin | date:'dd-MM-yy' }}</td>
                <td *ngIf="isLogged">
                   <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
                   <i class="bi bi-pencil"></i>EDITAR</button>

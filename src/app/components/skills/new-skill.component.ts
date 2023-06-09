@@ -10,8 +10,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./new-skill.component.css']
 })
 export class NewSkillComponent implements OnInit {
-nombre: string;
-porcentaje: number;
+  nombre: string;
+  porcentaje: number;
 
   constructor(private skillS: SkillService, private router: Router) { }
 
@@ -20,15 +20,21 @@ porcentaje: number;
   }
 
   onCreate(): void {
+    if (this.porcentaje > 100) {
+      Swal.fire('Alerta', 'El porcentaje no puede ser mayor a 100%', 'warning');
+      return;
+    }
+
     const skill = new Skill(this.nombre, this.porcentaje);
     this.skillS.save(skill).subscribe(
       data => {
-        Swal.fire("Muy bien!","Skill creada correctamente", "success");
+        Swal.fire('Muy bien!', 'Skill creada correctamente', 'success');
         this.router.navigate(['']);
-      }, err =>{
-        Swal.fire("Error", "Error al agregar la skill", "error");
+      },
+      err => {
+        Swal.fire('Error', 'Error al agregar la skill', 'error');
         this.router.navigate(['']);
       }
-    )
+    );
   }
 }
