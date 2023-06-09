@@ -21,9 +21,10 @@ My App is an interactive web application that allows users to efficiently manage
 ![Badge en Desarollo](https://img.shields.io/badge/STATUS-IN%20DEVELOPMENT-green)
 
 ## Screenshots
-![Principal](https://github.com/alpuinle/FrontEnd/assets/119378662/f7db68fa-87b6-4ac9-8b0a-268c7249a5ef)
-![Principal 2](https://github.com/alpuinle/FrontEnd/assets/119378662/d53730d8-405d-4bfd-9950-c9157ee4178c)
-![Carga](https://github.com/alpuinle/FrontEnd/assets/119378662/2be5a761-9480-494a-8427-de2c0672978c)
+![Principal](https://github.com/alpuinle/FrontEnd/assets/119378662/4df3fe45-be56-4bce-b619-c283f329bf9d)
+![Principal 2](https://github.com/alpuinle/FrontEnd/assets/119378662/976a39c1-1cb2-48c7-81b9-61965bf1c0a8)
+![Carga](https://github.com/alpuinle/FrontEnd/assets/119378662/be4c5bb8-da1d-489c-9f23-91d0c4ff9655)
+
 
 
 
