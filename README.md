@@ -21,9 +21,14 @@ My App is an interactive web application that allows users to efficiently manage
 ![Badge en Desarollo](https://img.shields.io/badge/STATUS-IN%20DEVELOPMENT-green)
 
 ## Screenshots
-![Principal](https://github.com/alpuinle/FrontEnd/assets/119378662/4df3fe45-be56-4bce-b619-c283f329bf9d)
-![Principal 2](https://github.com/alpuinle/FrontEnd/assets/119378662/976a39c1-1cb2-48c7-81b9-61965bf1c0a8)
-![Carga](https://github.com/alpuinle/FrontEnd/assets/119378662/be4c5bb8-da1d-489c-9f23-91d0c4ff9655)
+![Print 1](https://github.com/alpuinle/FrontEnd/assets/119378662/5f29b0aa-49cc-4b07-9981-7da80f86dc3e)
+![Print 2](https://github.com/alpuinle/FrontEnd/assets/119378662/b1ab9db4-2b94-48fc-8e80-071cf540626f)
+![Print 3](https://github.com/alpuinle/FrontEnd/assets/119378662/0d276b84-6f81-4437-98e0-fc00b37c6539)
+![Print 4](https://github.com/alpuinle/FrontEnd/assets/119378662/86290706-6cd7-4aa7-8c87-3557b783d87b)
+![Print 5](https://github.com/alpuinle/FrontEnd/assets/119378662/b371a16e-9ba7-4960-b738-9f5410b3c9a0)
+![Print 6](https://github.com/alpuinle/FrontEnd/assets/119378662/1d6f433c-8775-4279-898e-140fdb614bbb)
+![Print 7](https://github.com/alpuinle/FrontEnd/assets/119378662/fbaa92c2-5d52-4c3d-9d9b-d1921d93f08d)
+
 
 
 
